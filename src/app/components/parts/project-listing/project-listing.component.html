@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+
+    <div class="mt-3" style="font-weight: 800;">
+      <div class="row">
+        <div class="col"><span class="mt-3" style="font-weight: 800;">Yours</span></div>
+        <div class="col text-right">
+          <button class="btn btn-danger" routerLink="/dashboard">Create a new project</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-1">
+      <div class="a-row elevation">
+        <div class="row" (click)="projectDetails(1)">
+          <div class="col-sm-1 bold">#1</div>
+          <div class="col-sm-5">Project Title</div>
+          <div class="col-sm-6"><span class="text-muted">1,200 words</span></div>
+        </div>
+      </div>
+
+
+      <p class="mt-3" style="font-weight: 800;">Theirs - <small class="text-muted"> [ Collaborating ] </small></p>
+      <div class="a-row elevation">
+        <div class="row" (click)="projectDetails(2)">
+          <div class="col-sm-1 bold">#2</div>
+          <div class="col-sm-5">Project Title</div>
+          <div class="col-sm-6">
+            <img src="/assets/img/faces/1.png" class="circle sm-avatar" alt="">
+            Payne
+          </div>
+        </div>
+      </div>
+
+      <div class="a-row elevation">
+        <div class="row" (click)="projectDetails(3)">
+          <div class="col-sm-1 bold">#3</div>
+          <div class="col-sm-5">Project Title</div>
+          <div class="col-sm-6">
+            <img src="/assets/img/faces/1.png" class="circle sm-avatar" alt="">
+            Payne
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-2"></div>
+</div>

@@ -1,0 +1,92 @@
+<!--  -->
+
+
+<div class="editor-area">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="pd br-5 elevation lex-fonts" style="height: 457px; padding: 0;">
+
+        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs" [(selectedIndex)]="demo1TabIndex">
+          <mat-tab label="Collaborators">
+
+            <div class="pl" *ngFor="let p of project.collaborators" id="chats" #chats (click)="getChat(p)">
+              <span class="img">
+                <img class="circle sm-avatar" src="{{(p.img) ? p.img : '/assets/img/dummy-user.png'}}" alt="{{p.img}}">
+              </span>
+              <span class="det">
+                <span>{{p.name}}</span>
+              </span>
+              <div class="dt text-muted">{{p.approvalDate|date}}</div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Chat">
+            <div style="height: 360px;overflow: auto;" #chatScroll>
+              <div class="text-center text-muted p-1" *ngIf="!chat.messages">No messages yet</div>
+
+              <div style="padding: 0 2em;" *ngIf="authService.userData as user">
+                <div *ngFor="let m of chat.messages;">
+
+                  <div class="chat-item" *ngIf="user.email === m.to">
+                    <div class="mt-1" *ngIf="!m.samePosition"></div>
+                    <table style="width: 100%;">
+                      <tr>
+                        <td style="width: 26px;">
+                          <span *ngIf="!m.samePosition"><img class="circle sm-avatar"
+                              src="{{(m.img) ? m.img : '/assets/img/dummy-user.png'}}"></span>
+                        </td>
+                        <td>
+                          <div class="right-chat">{{m.text}}</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="chat-item text-right" *ngIf="user.email === m.from">
+                    <div class="mt-1" *ngIf="!m.samePosition"></div>
+                    <table style="width: 100%;">
+                      <tr>
+                        <td>
+                          <div class="left-chat ">{{m.text}}</div>
+                        </td>
+                        <td style="width: 34px;">
+                          <span *ngIf="!m.samePosition"><img class="circle sm-avatar"
+                              src="{{(m.img) ? m.img : '/assets/img/dummy-user.png'}}"></span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-input">
+              <input type="text" #chatInput>
+            </div>
+
+            <a class="send" (click)="sendChat(chatInput.value)">
+              <span class="material-icons">
+                send
+              </span>
+            </a>
+          </mat-tab>
+        </mat-tab-group>
+
+
+      </div>
+
+    </div>
+
+    <div class="col-sm-8">
+      <div class="pd br-5 elevation lex-fonts">
+        <p class="title lex-fonts" style="font-size: 14px;" id="title" contenteditable="true" #title
+          (keyup)="setChanged()">{{project.title}}</p>
+
+        <div style="min-height: 400px;margin: 1em -1em 2px -1em;">
+          <angular-editor [placeholder]="'Enter text here...'" [config]="editorConfig" [(ngModel)]="htmlContent"
+            outline=false></angular-editor>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

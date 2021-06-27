@@ -1,0 +1,57 @@
+<div>
+
+
+  <div class="initiate-form">
+
+    <h3>{{initiatePageTitle}}</h3>
+    <br />
+
+    <!-- Project Title -->
+    <div class="form-group" *ngIf="step === 1">
+      <label for="title">Project Title - <small class="form-text light text-muted">You can skip this for now</small></label>
+      <input type="text" id=title class="form-control" autocomplete="false" placeholder="Life in a nutshell" #title required>
+    </div>
+
+    <!-- Tags -->
+    <div class="form-group" *ngIf="step === 2">
+      <label for="tags">Tags</label>
+      <input type="text" id=tags class="form-control" autocomplete="false" placeholder="Identity, Equality, Status..." #tags
+        required>
+      <small class="form-text light text-muted">You can edit these later</small>
+    </div>
+
+    <!-- Introduction/Abstract -->
+    <div class="form-group" *ngIf="step === 3">
+      <label for="tags">Write an introduction or abstract</label>
+      <textarea type="text" id=tags class="form-control" #textarea></textarea>
+    </div>
+
+    <!-- All Done -->
+    <div class="form-group" *ngIf="step === 4">
+      <p>Great, you can start building or join a team on another project</p>
+
+    </div>
+
+
+
+    <!-- Calling SignIn Api from AuthService -->
+    <div class="form-group text-right">
+
+    <button *ngIf="step <= 3" class="btn txt-primary" routerLink="/explore">
+      Skip
+    </button>
+
+    <a *ngIf="step > 3" class="btn txt-primary" (click)="gotoNewProject()">
+      Take me to my project
+    </a>
+
+      &nbsp;&nbsp;&nbsp;
+
+      <button type="button" class="btn btn-danger" (click)="incrementPage()">
+        <!-- <span class="material-icons md-16">lock_open</span> -->
+        {{nextButtonName}}
+      </button>
+    </div>
+
+  </div>
+</div>

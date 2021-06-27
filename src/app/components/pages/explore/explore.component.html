@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="content">
+    <app-logo></app-logo>
+
+    <app-links></app-links>
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="mt-2 text-right">
+          <a routerLink="/initiate" class="btn btn-danger">
+            Create New Project</a>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div *ngIf="authService.userData as user">
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+          <div class="elevation p-1" style="background-color: #fff;">
+            <div class="user-image" style="height: 90px;">
+              <img class="circle avatar" src="{{(user.photoURL) ? user.photoURL : '/assets/img/dummy-user.png'}}"
+                alt="uimg">
+            </div>
+
+            <div class="text-center mt-2">
+              <div class="email bold">{{user.email}}</div>
+              <div class="displayName">{{user.displayName}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="elevation p-1" style="background-color: #fff;">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

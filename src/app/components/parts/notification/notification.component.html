@@ -1,0 +1,38 @@
+<div class="pd mt-2 br-5 elevation lex-fonts">
+  <div class="title">Project Requests</div>
+  <div class="pl" *ngFor="let n of notifications.joinRequest">
+    <span class="img">
+      <img class="circle sm-avatar" src="{{(n.img) ? n.img : '/assets/img/dummy-user.png'}}" alt="{{n.img}}">
+    </span>
+    <span class="det">
+      <span>{{n.name}}</span>
+    </span>
+    <div class="dt text-muted">{{n.projectName}}</div>
+    <!-- <div class="dt text-muted">{{n.requestDate|date}}</div> -->
+  </div>
+
+  <div *ngIf="!notifications.joinRequest">
+    <span class="text-muted" style="margin-left: 20px;">
+      <span>No new project requests</span>
+    </span>
+  </div>
+  <br>
+
+  <div class="title">Follow Requests</div>
+  <div class="pl" *ngFor="let n of notifications.followRequest">
+    <span class="img">
+      <img class="circle sm-avatar" src="{{(n.img) ? n.img : '/assets/img/dummy-user.png'}}" alt="{{n.img}}">
+    </span>
+    <span class="det">
+      <span>{{n.name}}</span>
+    </span>
+    <div class="dt text-muted">{{n.requestDate|date}}</div>
+  </div>
+
+  <div *ngIf="!notifications.followRequest">
+    <span class="text-muted" style="margin-left: 20px;">
+      <span>No new follow requests</span>
+    </span>
+  </div>
+
+</div>

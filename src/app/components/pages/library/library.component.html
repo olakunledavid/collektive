@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="content">
+    <app-logo></app-logo>
+
+    <app-links></app-links>
+
+    <div *ngIf="selectedProjectId">
+      <app-project-details [projectId]="selectedProjectId"></app-project-details>
+    </div>
+
+    <div *ngIf="!selectedProjectId">
+      <app-project-listing></app-project-listing>
+    </div>
+  </div>
+</div>

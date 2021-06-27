@@ -1,0 +1,297 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: "Kameron", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  background: #ececec !important;
+}
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+@font-face {
+  font-family: "Kameron";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Kameron"),
+    url("https://fonts.cdnfonts.com/s/15424/Kameron-Regular.woff")
+      format("woff");
+}
+@font-face {
+  font-family: "Kameron";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Kameron"),
+    url("https://fonts.cdnfonts.com/s/15424/Kameron-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lexend Deca"),
+    url("https://fonts.cdnfonts.com/s/29848/LexendDecaRegular.woff")
+      format("woff");
+}
+
+/* width
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+:customclasses:-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+.logo {
+  color: #007bff;
+  font-weight: 800;
+  font-size: 20px;
+}
+.content {
+  padding: 1em;
+}
+.top-pane {
+  padding: 1em 0;
+}
+.auth-form,
+.initiate-form {
+  max-width: 350px;
+  margin: 0px auto;
+  padding: 1em;
+}
+.auth-form {
+  box-shadow: 0 0 16px 4px #cccccc2e;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.form-group > label,
+.form-group > small,
+.form-group > input {
+  display: block;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.form-group > label {
+  font-size: 12px;
+  font-weight: 600;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.block {
+  width: 100%;
+}
+a,
+input,
+button {
+  font-size: 12px !important;
+  font-family: "Lexend Deca", sans-serif;
+}
+.txt-primary {
+  color: #0d6efd;
+}
+.txt-danger {
+  color: #0d6efd;
+}
+.light {
+  font-weight: lighter !important;
+}
+button {
+  font-size: 12px !important;
+}
+.or {
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid #cfcfcf;
+}
+.orInner {
+  position: relative;
+  top: 12px;
+  background: #fff;
+  display: inline-block;
+  width: 60px;
+}
+.md-16 {
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+}
+.btn-link {
+  cursor: pointer;
+}
+.mt-5 {
+  margin-top: 5em;
+}
+.s-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #0d6efd;
+  position: relative;
+  top: 0px;
+  border-radius: 30px;
+  color: blanchedalmond;
+  margin-right: 10px;
+  margin-left: 30px;
+}
+.mat-tab-label,
+.lex-fonts {
+  font-family: "Lexend Deca", sans-serif !important;
+}
+.kam-fonts {
+  font-family: "Kameron", sans-serif;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+
+.mt-5 {
+  margin-top: 5em !important;
+}
+.mt-6 {
+  margin-top: 6em !important;
+}
+.mt-3 {
+  margin-top: 3em !important;
+}
+.mt-2 {
+  margin-top: 2em !important;
+}
+.mt-1 {
+  margin-top: 1em !important;
+}
+.mt--1 {
+  margin-top: -1em !important;
+}
+.mt--2 {
+  margin-top: -2em !important;
+}
+.elevation {
+  box-shadow: 0px 8px 17px -10px #a9a9a9aa;
+}
+.p-1 {
+  padding: 1em !important;
+}
+.p-2 {
+  padding: 2em !important;
+}
+.sm-avatar {
+  width: 24px;
+  height: 24px;
+}
+.circle {
+  border-radius: 50px;
+}
+.bold {
+  font-weight: bold;
+}
+.a-row {
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.h-line {
+  height: 1px;
+  background-color: #cfcfcfa3;
+}
+.v-borders {
+  border-left: 1px solid #cfcfcf;
+  border-right: 1px solid #cfcfcf;
+}
+.vh-100 {
+  height: calc(100vh - 81px) !important;
+}
+.text-editor {
+  border: medium none;
+  outline: currentcolor none medium;
+  height: 99px;
+  width: 100%;
+  height: 200%;
+}
+.editor {
+  height: calc(100vh - 150px);
+  width: 100%;
+  background-color: #fff;
+  padding: 1em;
+}
+.chat-area {
+  height: calc(100vh - 150px);
+  background-color: #fff;
+  padding: 1em;
+}
+.pd {
+  background-color: #fff;
+  padding: 1em;
+  font-size: 12px;
+  margin-top: 1em;
+}
+.pd > .title {
+  margin-bottom: 10px;
+}
+.br-5 {
+  border-radius: 5px;
+}
+.pl {
+  cursor: pointer;
+  margin: 10px 0em;
+  padding: 0.5em 1.5em;
+}
+.pl:hover {
+  background-color: #cfcfcf;
+}
+.pl > .img {
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+}
+.dt {
+  margin-left: 34px;
+  font-size: 10px;
+  margin-top: -7px;
+}
+/* /deep/ .angular-editor-toolbar {
+  font: 100 14px/15px Roboto, Arial, sans-serif;
+  font-size: 14px;
+  background-color: transparent !important;
+  font-size: 0.7rem;
+  padding: 10px 0 0 0 !important;
+  border: none !important;
+}
+/deep/ .angular-editor .angular-editor-wrapper .angular-editor-textarea {
+  min-height: 5rem;
+  padding: 0 !important;
+  border: none !important;
+  background-color: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  outline: none;
+} */

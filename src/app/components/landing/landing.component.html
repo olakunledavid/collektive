@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="content">
+    <app-logo></app-logo>
+
+    <div class="split">
+      <div class="row">
+        <!-- Description -->
+        <div class="col">
+
+          <h1 class="mt-1">-</h1>
+          <h1 class="mt-1">Write with a Team</h1>
+          <div class="lex-fonts">
+            <div><span class="s-dot"></span>Start a project</div>
+            <div><span class="s-dot"></span>Select your team</div>
+            <div><span class="s-dot"></span>Write something fun</div>
+          </div>
+
+        </div>
+
+        <!-- Authentication -->
+        <div class="col">
+
+          <div class="auth-form" style="height: 440px;">
+
+            <div *ngIf="page.loading === true" style="position: relative;top: calc(-1em + 5px);margin-left: -1em;width: calc(100% + 2em);">
+              <mat-progress-bar color='accent' mode="indeterminate"></mat-progress-bar>
+            </div>
+
+            <div *ngIf="page.current===pages.signIn">
+              <app-sign-in></app-sign-in>
+
+              <div class="redirectToLogin">
+                <span>Don't have an account?
+                  <a class="btn-link" (click)="changePage(pages.signUp)"> Sign Up</a></span>
+              </div>
+            </div>
+
+            <div *ngIf="page.current===pages.signUp">
+              <app-sign-up></app-sign-up>
+
+              <div class="redirectToLogin">
+                <span>Already have an account?
+                  <a class="btn-link" (click)="changePage(pages.signIn)"> Sign In</a></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

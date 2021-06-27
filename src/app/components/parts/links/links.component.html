@@ -1,0 +1,25 @@
+<div class="row" *ngIf="authService.userData as user">
+  <div class="relative">
+    <div class="absolute" style="right: 0; top: -43px;">
+      <ul class="nav" style="left: -6px;
+position: relative;">
+        <li><a routerLinkActive="router-link-active" [routerLink]="['/explore']" class="btn-link">Home</a></li>
+        <li style="margin-right: 40px;"><a [routerLink]="['/projects']" class="btn-link">Projects</a></li>
+
+        <li><a class="btn-link" (click)="toggleNotificationVisibility()">
+          <span class="material-icons">
+            notifications
+          </span>
+        </a></li>
+        <li><a><img class="circle sm-avatar" src="{{(user.photoURL) ? user.photoURL : '/assets/img/dummy-user.png'}}"
+              alt="uimg"></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="relative" *ngIf="showingNotification === true">
+  <div class="absolute" style="width: 300px;height: 100px;right: 40px;top: -33px;z-index: 9;">
+    <app-notification></app-notification>
+  </div>
+</div>

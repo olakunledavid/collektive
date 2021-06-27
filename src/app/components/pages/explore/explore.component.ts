@@ -1,0 +1,13 @@
+import { AuthService } from './../../../shared/services/auth.service';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-explore',
+  templateUrl: './explore.component.html',
+  styleUrls: ['./explore.component.css'],
+})
+export class ExploreComponent implements OnInit {
+  constructor(public authService: AuthService) {}
+
+  ngOnInit(): void {}
+}
